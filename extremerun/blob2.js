@@ -2706,13 +2706,13 @@ var unityFramework = ( () => {
                 onEvent: function(event) {
                     switch (event.name) {
                     case "SDK_GAME_START":
-                        SendMessage("GameDistribution", "ResumeGameCallback");
+                       // SendMessage("GameDistribution", "ResumeGameCallback");
                         break;
                     case "SDK_GAME_PAUSE":
-                        SendMessage("GameDistribution", "PauseGameCallback");
+                       // SendMessage("GameDistribution", "PauseGameCallback");
                         break;
                     case "SDK_REWARDED_WATCH_COMPLETE":
-                        SendMessage("GameDistribution", "RewardedCompleteCallback");
+                       // SendMessage("GameDistribution", "RewardedCompleteCallback");
                         break;
                     case "SDK_ERROR":
                         break
@@ -2733,9 +2733,9 @@ var unityFramework = ( () => {
         function _SDK_PreloadAd() {
             if (typeof gdsdk !== "undefined" && typeof gdsdk.preloadAd !== "undefined") {
                 gdsdk.preloadAd(gdsdk.AdType.Rewarded).then(function(response) {
-                    SendMessage("GameDistribution", "PreloadRewardedVideoCallback", 1)
+                   // SendMessage("GameDistribution", "PreloadRewardedVideoCallback", 1)
                 }).catch(function(error) {
-                    SendMessage("GameDistribution", "PreloadRewardedVideoCallback", 0)
+                    //SendMessage("GameDistribution", "PreloadRewardedVideoCallback", 0)
                 })
             }
         }
@@ -2754,11 +2754,11 @@ var unityFramework = ( () => {
                 adType = Pointer_stringify(adType) || gdsdk.AdType.Interstitial;
                 gdsdk.showAd(adType).then(function(response) {
                     if (adType === gdsdk.AdType.Rewarded) {
-                        SendMessage("GameDistribution", "RewardedVideoSuccessCallback")
+                       // SendMessage("GameDistribution", "RewardedVideoSuccessCallback")
                     }
                 }).catch(function(error) {
                     if (adType === gdsdk.AdType.Rewarded) {
-                        SendMessage("GameDistribution", "RewardedVideoFailureCallback")
+                       // SendMessage("GameDistribution", "RewardedVideoFailureCallback")
                     }
                 })
             }
