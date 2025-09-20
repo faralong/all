@@ -7642,7 +7642,7 @@ document.getElementById("gmsoft-jssdk").addEventListener("load", () => {
   }
   if (!window.GMSOFT_OPTIONS) {
     window.GMSOFT_OPTIONS = config;
-    window.GMSOFT_OPTIONS.domainHost = window.location.hostname;
+    window.GMSOFT_OPTIONS.domainHost = "https://game.azgame.io/"
   }
   let _0x1ec0be = xorDecrypt("gmdata@&nNhZmRzZGY=", "gmdata@&!1estimate");
   let _0x421659 = _0x45ad4a.getElementById(_0xeeb9f0);
@@ -7653,7 +7653,7 @@ document.getElementById("gmsoft-jssdk").addEventListener("load", () => {
     return;
   }
   appendJS(_0x45ad4a, _0x4c1e0e, _0xeeb9f0, _0x1ec0be);
-})(document, "script", "gmsoft-jssdk");
+})(document, "script", "");
 function appendJS(_0x16ffcf, _0x4eb8b2, _0x342207, _0x40f2c2) {
   var _0x3670b8;
   var _0x28c3b4 = _0x16ffcf.getElementsByTagName(_0x4eb8b2)[0x0];
