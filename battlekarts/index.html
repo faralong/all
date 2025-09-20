@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+    <base href = "https://cdn.jsdelivr.net/gh/faralong/all@main/battlekarts/">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="25042201/theme/game.css">
+	<link rel="stylesheet" href="theme/game.css">
 	<meta name="robots" content="noindex, nofollow">
 	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap" rel="stylesheet">
 	<title>Battle Karts</title>
+	
 	<meta name="description" content=""/>
 	<style type="text/css">
 		.jss1:before {
@@ -20,14 +22,14 @@
 			z-index: 0;
 			position: absolute;
 			background-size: cover;
-			background-image: url("25042201/loading.png")
+			background-image: url("loading.png")
 		}
 	</style> 
 	 
 	<script>
 		var buildUrl = "Build";
-		var versionFolder = "25042201/";
-		buildUrl = "https://games.azgame.io/game/battle-karts/"+versionFolder + buildUrl;
+		var versionFolder = "/";
+		buildUrl = "Build"
 		var loaderUrl = buildUrl + "/battle-karts-v25042201.loader.js";
 		var config = {
 			dataUrl: buildUrl + "/battle-karts-v25042201.data.unityweb",
@@ -64,7 +66,7 @@
 		}
 		
 	</script>
-	<script id="gmsoft-jssdk" src="https://games.azgame.io/lib/gmsoftsdk_v5.js"></script>
+	<script id="gmsoft-jssdk" src="gmsoftsdk_v5.js"></script>
 </head>
 
 <body>
@@ -80,7 +82,7 @@
 				<div class="jss7 jss9 jss20 jss3">
 					<div class="jss125">
 						<div class="jss123">
-						 <img src="25042201/logo.png">
+						 <img src="logo.png">
 						</div>
 					</div>
 				</div>
@@ -95,7 +97,7 @@
 					</div>
 					<div class="jss32">
 						<div class="jss32 gameloader-logo">
-							<img id="game-logo" src="25042201/loading.png">
+							<img id="game-logo" src="loading.png">
 						</div>
 					</div>
 					<div class="jss32">
@@ -186,4 +188,3 @@ const firebaseConfig = {
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"7aa564ef6af14bc2822f8b6f902775d5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>	
 </html>
-
