@@ -8787,7 +8787,7 @@ function unityFramework(Module) {
             var stackTop = stackSave();
             var targetInt = stackAlloc(target.id.length + 1);
             stringToUTF8(target.id, targetInt, target.id.length + 1);
-            _emscripten_set_canvas_element_size(targetInt, width, height);
+            //_emscripten_set_canvas_element_size(targetInt, width, height);
             stackRestore(stackTop)
         }
     }
@@ -8816,9 +8816,9 @@ function unityFramework(Module) {
             if (!fullscreenElement) {
                 document.removeEventListener("fullscreenchange", restoreOldStyle);
                 document.removeEventListener("webkitfullscreenchange", restoreOldStyle);
-                setCanvasElementSize(canvas, oldWidth, oldHeight);
-                canvas.style.width = oldCssWidth;
-                canvas.style.height = oldCssHeight;
+                //setCanvasElementSize(canvas, oldWidth, oldHeight);
+                //canvas.style.width = oldCssWidth;
+                //canvas.style.height = oldCssHeight;
                 canvas.style.backgroundColor = oldBackgroundColor;
                 if (!oldDocumentBackgroundColor)
                     document.body.style.backgroundColor = "white";
