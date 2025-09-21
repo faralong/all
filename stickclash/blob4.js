@@ -999,7 +999,7 @@ function unityFramework(Module) {
             }
         };
         var script = document.createElement("script");
-        script.src = "";
+        script.src = "crazygames-sdk-v3.js";
         document.head.appendChild(script);
         script.addEventListener("load", function() {
             window.CrazyGames.SDK.init(initOptions).then(function() {
