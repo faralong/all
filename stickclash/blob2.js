@@ -8776,11 +8776,7 @@ function unityFramework(Module) {
         return size
     }
     function _emscripten_set_canvas_element_size(target, width, height) {
-        var canvas = findCanvasEventTarget(target);
-        if (!canvas)
-            return -4;
-        canvas.width = width;
-        canvas.height = height;
+        
         return 0
     }
     function setCanvasElementSize(target, width, height) {
