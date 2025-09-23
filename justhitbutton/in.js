@@ -646,7 +646,8 @@ if (Oa)
     }
     ;
 else if (Ma || Na)
-    Na ? Pa = self.location.href : "undefined" != typeof document && document.currentScript && (Pa = document.currentScript.src),
+    Na = true;
+    Na ? Pa = "https://cdn.jsdelivr.net/gh/faralong/all@main/justhitbutton/" : "undefined" != typeof document && document.currentScript && (Pa = document.currentScript.src),
     Pa = 0 !== Pa.indexOf("blob:") ? Pa.substr(0, Pa.replace(/[?#].*/, "").lastIndexOf("/") + 1) : "",
     Qa = a => {
         var b = new XMLHttpRequest;
