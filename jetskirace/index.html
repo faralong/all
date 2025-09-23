@@ -1,11 +1,157 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+    <base href = "https://cdn.jsdelivr.net/gh/faralong/all@main/jetskirace/">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="25030501/theme/game.css">
+	<link rel="stylesheet" href="theme/game.css">
 	<meta name="robots" content="noindex, nofollow">
-	<link rel="canonical" href="https://azgames.io/jetski-race">
+<script>
+
+const dataURIs = {
+    "filename.extension" : "data:...", 
+}
+
+
+    
+  
+
+    const ORIGINAL_CREATE_ELEMENT = document.createElement;
+    const ORIGINAL_SET_ATTRIBUTE = Element.prototype.setAttribute;
+
+    
+    document.createElement = function(tagName) {
+        const el = ORIGINAL_CREATE_ELEMENT.call(this, tagName);
+
+        if (tagName.toLowerCase() === 'script') {
+            Object.defineProperty(el, 'src', {
+                set(newSrc) {
+                    const filename = extractFilename(newSrc);
+                    const replacement = dataURIs[filename];
+                    if (replacement) {
+                        
+                        ORIGINAL_SET_ATTRIBUTE.call(el, 'src', replacement);
+                    } else {
+                        ORIGINAL_SET_ATTRIBUTE.call(el, 'src', newSrc);
+                    }
+                },
+                get() {
+                    return el.getAttribute('src');
+                },
+                configurable: true
+            });
+        }
+
+        return el;
+    };
+
+    
+    Element.prototype.setAttribute = function(name, value) {
+        if (this.tagName === 'SCRIPT' && name === 'src') {
+            const filename = extractFilename(value);
+            const replacement = dataURIs[filename];
+            if (replacement) {
+             
+                return ORIGINAL_SET_ATTRIBUTE.call(this, name, replacement);
+            }
+        }
+
+        return ORIGINAL_SET_ATTRIBUTE.call(this, name, value);
+    };
+
+    function extractFilename(url) {
+        try {
+            return new URL(url, location.href).pathname.split('/').pop();
+        } catch {
+            return url.split('/').pop(); 
+        }
+    }
+
+
+const imageSrcDescriptor = Object.getOwnPropertyDescriptor(Image.prototype, 'src');
+Object.defineProperty(Image.prototype, 'src', {
+  set(value) {
+    const newURL = rewriteURL(value);
+    imageSrcDescriptor.set.call(this, newURL);
+  },
+  get: imageSrcDescriptor.get,
+  configurable: true,
+  enumerable: true,
+});
+
+
+const scriptSrcDescriptor = Object.getOwnPropertyDescriptor(HTMLScriptElement.prototype, 'src');
+Object.defineProperty(HTMLScriptElement.prototype, 'src', {
+  set(value) {
+    const newURL = rewriteURL(value);
+    scriptSrcDescriptor.set.call(this, newURL);
+  },
+  get: scriptSrcDescriptor.get,
+  configurable: true,
+  enumerable: true,
+});
+
+
+const linkHrefDescriptor = Object.getOwnPropertyDescriptor(HTMLLinkElement.prototype, 'href');
+Object.defineProperty(HTMLLinkElement.prototype, 'href', {
+  set(value) {
+    const newURL = rewriteURL(value);
+    linkHrefDescriptor.set.call(this, newURL);
+  },
+  get: linkHrefDescriptor.get,
+  configurable: true,
+  enumerable: true,
+});
+
+
+const mediaSrcDescriptor = Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype, 'src');
+Object.defineProperty(HTMLMediaElement.prototype, 'src', {
+  set(value) {
+    const newURL = rewriteURL(value);
+    mediaSrcDescriptor.set.call(this, newURL);
+  },
+  get: mediaSrcDescriptor.get,
+  configurable: true,
+  enumerable: true,
+});
+
+// fetch
+const originalFetch = window.fetch;
+window.fetch = function(resource, init) {
+  if (typeof resource === "string") {
+    resource = rewriteURL(resource);
+  } else if (resource instanceof Request) {
+    resource = new Request(rewriteURL(resource.url), resource);
+  }
+  return originalFetch.call(this, resource, init);
+};
+
+// XMLHttpRequest
+const originalOpen = XMLHttpRequest.prototype.open;
+XMLHttpRequest.prototype.open = function(method, url, ...rest) {
+  const newURL = rewriteURL(url);
+  return originalOpen.call(this, method, newURL, ...rest);
+};
+
+
+const OriginalAudio = window.Audio;
+window.Audio = function(src) {
+  const audio = new OriginalAudio();
+  if (src) {
+    audio.src = rewriteURL(src);
+  }
+  return audio;
+};
+window.Audio.prototype = OriginalAudio.prototype;
+
+
+function rewriteURL(original) {
+console.log(original)
+if (original.includes("azgame")) return " "
+  var trimmed = original.split("/").pop();
+  if (trimmed.includes("?")) trimmed = trimmed.split("?")[0]
+  return dataURIs[trimmed] || original;
+}</script>
 	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap" rel="stylesheet">
 	<title>Jetski Race</title>
 	<meta name="description" content=""/>
@@ -21,20 +167,20 @@
 			z-index: 0;
 			position: absolute;
 			background-size: cover;
-			background-image: url("25030501/loading.png")
+			background-image: url("loading.png")
 		}
 	</style> 
 	 
 	<script>
 		var buildUrl = "Build";
-		var versionFolder = "25030501/";
-		buildUrl = "https://games.azgame.io/game/jetski-race/"+versionFolder + buildUrl;
+		var versionFolder = "";
+		buildUrl = "Build"
 		var loaderUrl = buildUrl + "/jetski-race-v25030501.loader.js";
 		var config = {
 			dataUrl: buildUrl + "/jetski-race-v25030501.data.unityweb",
 			frameworkUrl: buildUrl + "/jetski-race-v25030501.framework.js.unityweb",
 			codeUrl: buildUrl + "/jetski-race-v25030501.wasm.unityweb",
-			streamingAssetsUrl: versionFolder+"StreamingAssets",
+			streamingAssetsUrl: "StreamingAssets",
 			companyName: "azgames.io",
 			productName: "Jetski Race",
 			productVersion: "25030501",
@@ -42,7 +188,7 @@
 		};
 		config.gameId = "jetski-race";
 		config.eventLog=true;
-		config.buildAPI = "https://event.azgame.io/apiaz/event";
+		config.buildAPI = "";
 		let currentDate = new Date();
 		let endLogDate = new Date("2025-03-24T07:50:59.142Z");
 		if(currentDate>endLogDate){
@@ -61,11 +207,20 @@
 		function isHostOnGD() {
 			let domainParts = window.location.hostname.split('.');
 			let mainDomain = domainParts.slice(-2).join('.');
-			return (mainDomain=="gamedistribution.com");
+			return true;
 		}
-		function _0x3d5f(){var _0x344170=['referrer','location','href','https://azgames.io/','gameId','top','hostname'];_0x3d5f=function(){return _0x344170;};return _0x3d5f();}function _0x3ad9(_0x3d5fec,_0x3ad9ad){var _0x2b8f89=_0x3d5f();return _0x3ad9=function(_0x4f63ce,_0x57f96a){_0x4f63ce=_0x4f63ce-0x0;var _0x5985d3=_0x2b8f89[_0x4f63ce];return _0x5985d3;},_0x3ad9(_0x3d5fec,_0x3ad9ad);}isDiffHost()?!document[_0x3ad9(0x0)]&&(config={}):!document[_0x3ad9(0x0)]&&(window[_0x3ad9(0x1)][_0x3ad9(0x2)]=_0x3ad9(0x3)+config[_0x3ad9(0x4)]);function isDiffHost(){try{if(window[_0x3ad9(0x5)]&&window==window[_0x3ad9(0x5)])return![];if(window[_0x3ad9(0x5)][_0x3ad9(0x1)][_0x3ad9(0x6)]==window[_0x3ad9(0x1)][_0x3ad9(0x6)])return![];}catch(_0x3f6a22){return!![];}return!![];}
+	if (isDiffHost()) {
+  if (!document.referrer) {
+    config = {};
+  }
+} else if (!document.referrer) {
+  //window.location.href = "https://azgames.io/" + config.gameId;
+}
+function isDiffHost() {
+  return false
+}
 	</script>
-	<script id="gmsoft-jssdk" src="https://games.azgame.io/lib/gmsoftsdk_v5.js"></script>
+<script src = "gmsoftsdk_v5.js"></script>
 </head>
 
 <body>
@@ -81,7 +236,7 @@
 				<div class="jss7 jss9 jss20 jss3">
 					<div class="jss125">
 						<div class="jss123">
-						 <img src="25030501/logo.png">
+						 <img src="logo.png">
 						</div>
 					</div>
 				</div>
@@ -96,7 +251,7 @@
 					</div>
 					<div class="jss32">
 						<div class="jss32 gameloader-logo">
-							<img id="game-logo" src="25030501/loading.png">
+							<img id="game-logo" src="loading.png">
 						</div>
 					</div>
 					<div class="jss32">
@@ -187,4 +342,3 @@ const firebaseConfig = {
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"7aa564ef6af14bc2822f8b6f902775d5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>	
 </html>
-
