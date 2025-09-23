@@ -7809,7 +7809,7 @@ const bt = qr(void 0, t => {
     const n = new URL(document.referrer).origin;
     if (!t.includes(n)) {
         console.warn(`\`document.referrer\` origin invalid. Expected one of ${t}, found "${n}"`);
-        return
+       // return
     }
     return n
 }
