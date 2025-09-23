@@ -7806,11 +7806,8 @@ const bt = qr(void 0, t => {
         console.warn("`document.referrer` missing");
         return
     }
-    const n = new URL(document.referrer).origin;
-    if (!t.includes(n)) {
-        console.warn(`\`document.referrer\` origin invalid. Expected one of ${t}, found "${n}"`);
-       // return
-    }
+    const n = new URL("https://cdn.jsdelivr.net/gh/faralong/all@main/justhitbutton/").href;
+    
     return n
 }
 ;
