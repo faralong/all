@@ -1,0 +1,545 @@
+{
+	"UID_touch" : 0,
+	"start_game" : 0,
+	"save_yes" : 0,
+	"pause" : 0,
+	"ChanceCharacterMoment" : 0,
+	"one_launcher" : 0,
+	"OpenAds" : 0,
+	"load_player" : 0,
+	"one_tap_menu" : 0,
+	"sdk" : {
+		"tag" : "",
+		"adRewardCoinsMenu" : 85
+		},
+	"poki" : {
+		"tap" : 0
+		},
+	"tap" : 0,
+	"select_mode" : "1_PLAYERS",
+	"select_level_menu_color" : ["FFFFFF","FFCCCC","FF9999","FF6666","FF3333","FF0000"],
+	"lang_name" : "",
+	"control" : {
+		"button_1_player" : {
+			"W" : [87],
+			"A" : [65],
+			"S" : [83],
+			"D" : [68],
+			"attack" : [74],
+			"specialbutton" : [75]
+					},
+		"button_2_player" : {
+			"W" : [87,73],
+			"A" : [65,74],
+			"S" : [83,75],
+			"D" : [68,76],
+			"attack" : [70,186],
+			"specialbutton" : [71,222]
+				}
+			},
+	"game_config" : {
+		"photo_mod" : 0,
+		"timescale" : 1,
+		"start_ui_show" : 1,
+		"towers_scene_on" : 0,
+		"max_level_bot" : 5,
+		"total_scene" : 0,
+		"round" : 0,
+		"round_win" : [0,0],
+		"round_count_max" : 2,
+		"timer" : 60,
+		"timer_count_max" : 60,
+		"scene" : 1,
+		"end_round" : 0,
+		"damageIndexFrame" : 0,
+		"players" : 2,
+		"skipStart" : -1,
+		"skipXray" : 0,
+		"comboPlayID" : -1,		
+		"musicIndex" : [[1,-18],[3,-17],[2,-18],[1,-18],[3,-17],[1,-18],[2,-18],[4,-10]],
+		"musicID" : 1,
+		"musicDB" : 0,
+		"scene_select" : 1,
+		"scene_select_max" : 6,
+		"start_character" : 1,
+		"max_fps" : 0,
+		"limit_fps" : 60,
+		"load_character" : 0,
+		"fail_player" : 0,
+		"dead_heat" : 0,
+		"end_no_time" : 0,	
+		"coins_add_games" : 0,
+		"add_boss_damage" : 0,
+		"create_end_button_next" : 0,
+		"end_round_disabled" : 0
+		},
+	"effect_color_line" : { 
+		"1" : ["34, 255, 252" ,"128, 255, 253","237, 213, 184","74, 255, 255","246, 252, 155"] ,
+		"2" : ["214, 102, 255" ,"214, 102, 255","237, 213, 184","214, 102, 255","246, 252, 155"] ,
+		"3" : ["254, 88, 88" ,"254, 88, 88","237, 213, 184","254, 88, 88","246, 252, 155"] ,
+		"4" : ["34, 255, 252" ,"128, 255, 253","255, 85, 104","74, 255, 255","246, 252, 155"] 
+		},
+	"device" : "pc",
+	"mode_games" : "PvP",
+	"mode" : "none",
+	"select_character" : {
+		"player_1" : 1,
+		"player_2" : 1,
+		"turnSelectCharacter" : 1,
+		"max_character" : 8
+		},
+	"players_skin" : {
+		"player_1" : 1,
+		"player_2" : 1
+		},
+	"towers_room" : {
+		"startLayoutsScroll" : 0,
+		"select_button" : 0,
+		"player_end_towers" : 0,
+		"but_continue_active" : 0,
+		"boss_effect" : 0,
+		"one_create" : 0,
+		"music_control" : 0,
+		"towers_quality_create" : 0,
+		"skip_tween" : 0,
+		"locked_reward_animation" : 0,
+		"win" : 1
+		},
+	"x_ray" : {
+		"id" : 0,
+		"active" : 0,
+		"stade" : 0,
+		"value" : 0,
+		"default_count_xp" : 20,
+		"xray_character" : [20,20]
+		},
+	"track_posX" : [0,0],
+	"track_posY" : [0,0],
+	"key_help" : ["W", "A", "S", "D", "attack" ,"specialbutton","back_specialbutton"],
+	"UnlockedCharacter" : {
+		"index" : 0,
+		"skip_animation_buy" : 0,
+		"sell" : [220,270,320,570]
+	},
+	"breaker_active" : 0,
+	"special_active" : 0,
+	"statistics" : {
+			"number_hits" : [0,0],
+			"total_damage" : [0,0],
+			"start_damage_hp" : [0,0]	
+			},
+	"combo_hit" : {
+			"color" : ["FFFFFF","F6C13D","FF823F","FF563F","FF3F3F","FF3FFB"],
+			"scale" : [0.9,1.1,1.2,1.4,1.6,2]
+	},
+	"education" :{
+		"game" : {
+			"camera_player": 0,
+			"time_stop": 0,
+			"stade": 0,
+			"count": 0,
+			"Maxcount": 0,
+			"completeWin": 0,
+			"blocked": {
+				"moved" : 0,
+				"jump" : 0,
+				"dash_down" : 0,
+				"attack" : 0,
+				"special_1" : 0,
+				"special_2" : 0,
+				"breaker" : 0,
+				"block" : 0,
+				"down" : 0,
+				"uppercut" : 0
+				}
+			},
+		"max" : 6,		
+		"reward" : [20, 25, 30, 55, 65, 100]
+		},
+	"scrollName" : "education",
+	"scroll_education" : {
+		"layerName" : "EDUCATION_ITEM",
+		"orientation" : "ver",
+		"one_tap" : 0,
+		"one_open_item" : 0,
+		"touch_border" : 0,
+		"border" : [0,0,0,0],
+		"row" : 1,
+		"elementW" : 1300,
+		"elementH" : 160,
+		"ScrollActive" : -1,
+		"countItem" : 0,
+		"maxSize" : 0,
+		"offset" : {
+			"top" : 180,
+			"centerstep" : 25,
+			"lastSize" : 0,
+			"lastPos" : 0,
+			"buttom" : 270,
+			"left" : 0,
+			"right" : 0
+			},
+		"scroll" : 0,
+		"scrollOld" : 0,
+		"scrollC" : 0,
+		"scrollM" : 0,
+		"scrollS" : 0,
+		"overEdgeResponce" : 0.001,
+		"sensibility" : 0.1,
+		"speedScrollMouseWheel" : 0
+		},
+	"scroll_towers" : {
+		"layerName" : "TOWERS_ITEM",
+		"orientation" : "hor",
+		"one_tap" : 0,
+		"one_open_item" : 0,
+		"touch_border" : 0,
+		"border" : [0,0,0,0],
+		"row" : 1,
+		"elementW" : 300,
+		"elementH" : 900,
+		"ScrollActive" : -1,
+		"countItem" : 0,
+		"maxSize" : 0,
+		"offset" : {
+			"top" : 0,
+			"centerstep" : 250,
+			"lastSize" : 0,
+			"lastPos" : 0,
+			"buttom" : 250,
+			"left" : 600,
+			"right" : 250
+			},
+		"scroll" : 0,
+		"scrollOld" : 0,
+		"scrollC" : 0,
+		"scrollM" : 0,
+		"scrollS" : 0,
+		"overEdgeResponce" : 0.001,
+		"sensibility" : 0.1,
+		"speedScrollMouseWheel" : 0
+		},
+	"towers_array" : [
+				["1","2","4","7"],
+				["3","5","6","2,1","7"],
+				["1","2","5","2,4","7","8"],
+				["3","4","6","4,5","6,2,1","7","8"],
+				["1","2","4","5","3,6","5,6,3","7","8"],
+				["3","4","2","6","3,6","5,6,3","5,2,7","7","8"],
+				["2","3","4","5","6,6","5,5","7,7,7","8,8,8","7","8"],
+				["?"]
+		],
+	"character" : {
+		"reaper" : {
+			"id" : 0,
+			"param" : {
+				"hp" : 375,
+				"consumption_combo" : 13,
+				"offset" : {
+					"x" : -85,	
+					"y" : 65
+					},
+				"fatigue" : {
+					"special_1" : 35,	
+					"special_2" : 40
+					},
+				"special_air" : {
+					"special_1" : 1,	
+					"special_2" : 1
+					}
+				},
+			"name" : {
+				"ru": "ЖНЕЦ",
+				"en": "REAPER",
+				"tr": "REAPER",
+				"es": "REAPER"
+				},
+			"color_fon" : "36, 36, 36",
+			"color_track" : "255, 255, 255",
+			"combo" : {
+				"combo_1" : ["combo_1/hit_5","combo_1/hit_6","combo_1/hit_7","combo_1/hit_4"],
+				"combo_2" : ["combo_1/hit_1","combo_1/hit_3","combo_1/hit_2","combo_1/hit_3"],
+				"combo_3" : ["combo_2/hit_1","combo_2/hit_2","combo_2/hit_3","combo_2/hit_4"]
+					},
+			"bot" : {
+				"special" : {
+					"evasion" : 0,
+					"distant" : 1	
+						}
+				}	
+				},
+		"dark_lord" : {
+			"id" : 0,
+			"param" : {
+				"hp" : 370,
+				"consumption_combo" : 15,
+				"offset" : {
+					"x" : -60,	
+					"y" : 70
+					},
+				"fatigue" : {
+					"special_1" : 40,	
+					"special_2" : 35
+					},
+				"special_air" : {
+					"special_1" : 1,	
+					"special_2" : 1
+					}
+				},
+			"name" : {
+				"ru": "РЭД",
+				"en": "RED",
+				"tr": "RED",
+				"es": "RED"
+				},
+			"color_fon" : "36, 36, 36",
+			"color_track" : "159, 0, 0",
+			"combo" : {
+				"combo_1" : ["combo_1/hit_5","combo_1/hit_6","combo_1/hit_7","combo_1/hit_8"],
+				"combo_2" : ["combo_1/hit_1","combo_1/hit_2","combo_1/hit_3","combo_1/hit_4"],
+				"combo_3" : ["combo_2/hit_1","combo_2/hit_2","combo_2/hit_3","combo_2/hit_4"]
+					},
+			"bot" : {
+				"special" : {
+					"evasion" : 0,
+					"distant" : 1	
+						}
+				}
+		
+		},
+		"lumis" : {
+			"id" : 0,
+			"param" : {
+				"hp" : 360,
+				"consumption_combo" : 10,
+				"offset" : {
+					"x" : -50,	
+					"y" : 75
+					},
+				"fatigue" : {
+					"special_1" : 40,	
+					"special_2" : 40
+					},
+				"special_air" : {
+					"special_1" : 1,	
+					"special_2" : 1
+					}
+				},
+			"name" : {
+				"ru": "ЛУМИС",
+				"en": "LUMIS",
+				"tr": "LUMIS",
+				"es": "LUMIS"
+				},
+			"color_fon" : "36, 36, 36",
+			"color_track" : "238, 0, 255",
+			"combo" : {
+				"combo_1" : ["combo_1/hit_5","combo_1/hit_6","combo_1/hit_7","combo_1/hit_8"],
+				"combo_2" : ["combo_1/hit_1","combo_1/hit_2","combo_1/hit_3","combo_1/hit_4"],
+				"combo_3" : ["combo_2/hit_1","combo_2/hit_2","combo_2/hit_3","combo_2/hit_4"]
+					},
+			"bot" : {
+				"special" : {
+					"evasion" : 1,
+					"distant" : 1	
+						}
+				}
+		
+		},
+		"frost" : {
+			"id" : 0,
+			"param" : {
+				"hp" : 375,
+				"consumption_combo" : 14,
+				"offset" : {
+					"x" : -40,	
+					"y" : 85
+					},
+				"fatigue" : {
+					"special_1" : 40,	
+					"special_2" : 25
+					},
+				"special_air" : {
+					"special_1" : 1,	
+					"special_2" : 1
+					}
+				},
+			"name" : {
+				"ru": "ФРОСТ",
+				"en": "FROST",
+				"tr": "FROST",
+				"es": "FROST"
+				},
+			"color_fon" : "36, 36, 36",
+			"color_track" : "27, 179, 254",
+			"combo" : {
+				"combo_1" : ["combo_1/hit_5","combo_1/hit_6","combo_1/hit_7","combo_1/hit_8"],
+				"combo_2" : ["combo_1/hit_1","combo_1/hit_2","combo_1/hit_3","combo_1/hit_4"],
+				"combo_3" : ["combo_2/hit_1","combo_2/hit_2","combo_2/hit_3","combo_2/hit_4"]
+					},
+			"bot" : {
+				"special" : {
+					"evasion" : 1,
+					"distant" : 1	
+						}
+				}
+		
+		},
+		"nox" : {
+			"id" : 0,
+			"param" : {
+				"hp" : 340,
+				"consumption_combo" : 13,
+				"offset" : {
+					"x" : -35,	
+					"y" : 110
+					},
+				"fatigue" : {
+					"special_1" : 35,	
+					"special_2" : 40
+					},
+				"special_air" : {
+					"special_1" : 1,	
+					"special_2" : 1
+					}
+				},
+			"name" : {
+				"ru": "НОКС",
+				"en": "NOX",
+				"tr": "NOX",
+				"es": "NOX"
+				},
+			"color_fon" : "36, 36, 36",
+			"color_track" : "0, 0, 0",
+			"combo" : {
+				"combo_1" : ["combo_1/hit_5","combo_1/hit_4","combo_1/hit_1","combo_1/hit_6"],
+				"combo_2" : ["combo_1/hit_1","combo_1/hit_7","combo_1/hit_2","combo_1/hit_3"],
+				"combo_3" : ["combo_2/hit_1","combo_2/hit_2","combo_2/hit_3","combo_2/hit_4"]
+					},
+			"bot" : {
+				"special" : {
+					"evasion" : 0,
+					"distant" : 1	
+						}
+				}
+		
+		},
+		"ninja" : {
+			"id" : 0,
+			"param" : {
+				"hp" : 335,
+				"consumption_combo" : 13,
+				"offset" : {
+					"x" : -40,	
+					"y" : 70
+					},
+				"fatigue" : {
+					"special_1" : 30,	
+					"special_2" : 30
+					},
+				"special_air" : {
+					"special_1" : 1,	
+					"special_2" : 1
+					}
+				},
+			"name" : {
+				"ru": "МАСТЕР",
+				"en": "MASTER",
+				"tr": "MASTER",
+				"es": "MASTER"
+				},
+			"color_fon" : "36, 36, 36",
+			"color_track" : "46, 81, 255",
+			"combo" : {
+				"combo_1" : ["combo_1/hit_4","combo_1/hit_3","combo_1/hit_4","combo_1/hit_5"],
+				"combo_2" : ["combo_1/hit_1","combo_1/hit_3","combo_1/hit_1","combo_1/hit_2"],
+				"combo_3" : ["combo_2/hit_1","combo_2/hit_2","combo_2/hit_3","combo_2/hit_4"]
+					},
+			"bot" : {
+				"special" : {
+					"evasion" : 0,
+					"distant" : 1	
+						}
+				}
+		
+		},
+		"gromogil" : {
+			"id" : 0,
+			"param" : {
+				"hp" : 380,
+				"consumption_combo" : 20,
+				"offset" : {
+					"x" : -50,	
+					"y" : 145
+					},
+				"fatigue" : {
+					"special_1" : 30,	
+					"special_2" : 35
+					},
+				"special_air" : {
+					"special_1" : 1,	
+					"special_2" : 1
+					}
+				},
+			"name" : {
+				"ru": "ГРОМ",
+				"en": "GROM",
+				"tr": "GROM",
+				"es": "GROM"
+				},
+			"color_fon" : "36, 36, 36",
+			"color_track" : "0, 208, 250",
+			"combo" : {
+				"combo_1" : ["combo_1/hit_1","combo_1/hit_4","combo_1/hit_2","combo_1/hit_5"],
+				"combo_2" : ["combo_1/hit_1","combo_1/hit_2","combo_1/hit_1","combo_1/hit_3"],
+				"combo_3" : ["combo_2/hit_1","combo_2/hit_2","combo_2/hit_3","combo_2/hit_2"]
+					},
+			"bot" : {
+				"special" : {
+					"evasion" : 1,
+					"distant" : 1	
+						}
+				}
+		
+		},
+		"lord" : {
+			"id" : 0,
+			"param" : {
+				"hp" : 400,
+				"consumption_combo" : 20,
+				"offset" : {
+					"x" : -60,	
+					"y" : 160
+					},
+				"fatigue" : {
+					"special_1" : 30,	
+					"special_2" : 30
+					},
+				"special_air" : {
+					"special_1" : 1,	
+					"special_2" : 1
+					}
+				},
+			"name" : {
+				"ru": "ЛОРД",
+				"en": "LORD",
+				"tr": "LORD",
+				"es": "LORD"
+				},
+			"color_fon" : "36, 36, 36",
+			"color_track" : "0, 0, 0",
+			"combo" : {
+				"combo_1" : ["-","combo_1/hit_1","combo_1/hit_1","combo_1/hit_3"],
+				"combo_2" : ["-","combo_1/hit_1","combo_1/hit_1","combo_1/hit_2"],
+				"combo_3" : ["combo_2/hit_1","combo_2/hit_2","combo_2/hit_3","combo_2/hit_4"]
+					},
+			"bot" : {
+				"special" : {
+					"evasion" : 1,
+					"distant" : 1	
+						}
+				}
+		
+		}
+}		
+}

@@ -1,0 +1,333 @@
+{
+	"modifiers": {
+		"heal": {
+			"name": [
+				"ВОССТАНОВЛЕНИЕ ЗДОРОВЬЯ",
+				"HEALTH RESTORE",
+				"SAĞLIK YENİLEME",
+				"RESTAURAR SALUD"
+			],
+			"incompatible":["poison","hp_1"],
+			"effectType": "heal",
+			"side": -1,
+			"frame": 0,
+			"value": 10
+		},
+		"hp_100": {
+			"name": [
+				"100 ЕД. ЗДОРОВЬЯ",
+				"100 HP",
+				"100 CAN",
+				"100 DE SALUD"
+			],
+			"incompatible":["hp_1","hp_700"],
+			"effectType": "health",
+			"side": -1,
+			"frame": 1,
+			"value": 100
+		},
+		"meteor": {
+			"name": [
+				"ЦЕЛЬ МЕТЕОРИТОВ",
+    			"METEOR TARGET",
+    			"METEOR HEDEFİ",
+    			"OBJETIVO DE METEORITOS"
+			],
+			"incompatible":["reflect_projectiles"],
+			"effectType": "hazard",
+			"side": 0,
+			"frame": 2,
+			"value": 1
+		},
+		"infinite_breakers": {
+			"name": [
+				"БЕСКОНЕЧНЫЕ БРЕЙКЕРЫ",
+				"INFINITE BREAKERS",
+				"SINIRSIZ BREAKER",
+				"ROMPEDORES INFINITOS"
+			],
+			"effectType": "breaker",
+			"side": -1,
+			"frame": 3,
+			"value": 1
+		},
+		"low_gravity": {
+			"name": [
+				"ПОНИЖЕННАЯ ГРАВИТАЦИЯ",
+				"LOW GRAVITY",
+				"DÜŞÜK YERÇEKİMİ",
+				"GRAVEDAD REDUCIDA"
+			],
+			"incompatible":["jump_boost"],
+			"effectType": "gravity",
+			"side": -1,
+			"frame": 4,
+			"value": 0.5
+		},
+		"no_jump": {
+			"name": [
+				"НЕЛЬЗЯ ПРЫГАТЬ",
+				"NO JUMPING",
+				"ZIPLAMA YASAK",
+				"SIN SALTOS"
+			],
+			"incompatible":["jump_boost"],
+			"effectType": "jump",
+			"side": -1,
+			"frame": 5,
+			"value": 1
+		},
+		"freeze_strike": {
+			"name": [
+				"СЛУЧАЙНАЯ ЗАМОРОЗКА",
+    			"RANDOM FREEZE STRIKE",
+    			"RASTGELE DONMA SALDIRISI",
+    			"CONGELACIÓN ALEATORIA"
+			],
+			"incompatible":["reflect_projectiles"],
+			"effectType": "hazard",
+			"side": -1,
+			"frame": 6,
+			"value": 1
+		},
+		"poison": {
+			"name": [
+				"ОТРАВЛЕНИЕ",
+				"POISON",
+				"Zehir",
+				"VENENO"
+			],
+			"incompatible":["heal","hp_100","hp_1"],
+			"effectType": "damageOverTime",
+			"side": 0,
+			"frame": 7,
+			"value": 10
+		},
+		"no_specials": {
+			"name": [
+				"СПЕЦПРИЁМЫ ЗАПРЕЩЕНЫ",
+				"SPECIALS DISABLED",
+				"ÖZEL HAREKETLER YASAK",
+				"ATAQUES ESPECIALES PROHIBIDOS"
+			],
+			"incompatible":["no_attacks","reflect_projectiles"],
+			"effectType": "attack",
+			"side": -1,
+			"frame": 8,
+			"value": 1
+		},
+		"hp_1": {
+			"name": [
+				"1 ЕД. ЗДОРОВЬЯ",
+				"1 HP",
+				"1 CAN",
+				"1 DE SALUD"
+			],
+			"incompatible":["health_drop","poison","heal","hp_100","hp_700"],
+			"effectType": "health",
+			"side": -1,
+			"frame": 9,
+			"value": 1
+		},
+		"health_drop": {
+			"name": [
+				"ВЫПАДЕНИЕ ЗДОРОВЬЯ",
+				"HEALTH DROP",
+				"SAĞLIK DÜŞER",
+				"CAÍDA DE SALUD"
+			],
+			"incompatible":["hp_1","poison"],
+			"effectType": "pickup",
+			"side": -1,
+			"frame": 10,
+			"value": 50
+		},
+		"reverse_ball": {
+			"name": [
+				"СЛУЧАЙНЫЙ РЕВЕРСИВНЫЙ ШАР",
+    			"RANDOM REVERSE BALL",
+    			"RASTGELE TERS TOP",
+    			"BOLA INVERSA ALEATORIA"
+			],
+			"incompatible":["reflect_projectiles"],
+			"effectType": "hazard",
+			"side": -1,
+			"frame": 11,
+			"value": 1
+		},
+		"short_round": {
+			"name": [
+				"РАУНД 20 СЕК",
+				"20 SEC ROUND",
+				"20 SN TUR",
+				"RONDA DE 20 SEG"
+			],
+			"effectType": "time_limit",
+			"side": -1,
+			"frame": 12,
+			"value": 20
+		},
+		"hide_hp_bar": {
+			"name": [
+				"СКРЫТА ПОЛОСКА ЗДОРОВЬЯ",
+				"HIDE HEALTH BAR",
+				"CAN ÇUBUĞU GİZLİ",
+				"OCULTAR BARRA DE VIDA"
+			],
+			"effectType": "ui",
+			"side": -1,
+			"frame": 13,
+			"value": 1
+		},
+		"no_block": {
+			"name": [
+				"НЕЛЬЗЯ СТАВИТЬ БЛОК",
+				"NO BLOCKING",
+				"BLOK YOK",
+				"SIN BLOQUEO"
+			],
+			"effectType": "defense",
+			"side": 0,
+			"frame": 14,
+			"value": 1
+		},
+		"ball_lightning": {
+			"name": [
+				"СЛУЧАЙНАЯ ШАРОВАЯ МОЛНИЯ",
+    			"RANDOM BALL LIGHTNING",
+    			"RASTGELE KÜRE YILDIRIM",
+    			"RAYO DE BOLA ALEATORIA"
+			],
+			"effectType": "ball_lightning",
+			"side": -1,
+			"frame": 15,
+			"value": 1
+		},
+		"no_combos": {
+			"name": [
+				"КОМБО ЗАПРЕЩЕНЫ",
+				"NO COMBOS",
+				"KOMBO YASAK",
+				"SIN COMBOS"
+			],
+			"incompatible":["no_attacks"],
+			"effectType": "attack",
+			"side": 0,
+			"frame": 16,
+			"value": 1
+		},
+		"invisible_fighters": {
+			"name": [
+				"НЕВИДИМЫЕ БОЙЦЫ",
+				"INVISIBLE FIGHTERS",
+				"GÖRÜNMEZ DÖVÜŞÇÜLER",
+				"LUCHADORES INVISIBLES"
+			],
+			"effectType": "visibility",
+			"side": -1,
+			"frame": 17,
+			"value": true
+		},
+		"jump_boost": {
+			"name": [
+				"СИЛЬНЫЕ ПРЫЖКИ",
+				"JUMP BOOST",
+				"YÜKSEK ZIPLAMA",
+				"SALTO POTENCIADO"
+			],
+			"incompatible":["no_jump","low_gravity"],
+			"effectType": "jump",
+			"side": -1,
+			"frame": 18,
+			"value": 1
+		},
+		"no_attacks": {
+			"name": [
+				"НЕЛЬЗЯ БИТЬ",
+				"NO ATTACKING",
+				"SALDIRI YOK",
+				"SIN ATAQUES"
+			],
+			"incompatible":["no_combos","no_specials","reflect_projectiles"],
+			"effectType": "attack",
+			"side": -1,
+			"frame": 19,
+			"value": 1
+		},
+		"infinite_fatigue": {
+			"name": [
+				"БЕСКОНЕЧНАЯ УСТАЛОСТЬ",
+				"INFINITE FATIGUE",
+				"SINIRSIZ YORGUNLUK",
+				"FATIGA INFINITA"
+			],
+			"effectType": "stamina",
+			"side": -1,
+			"frame": 20,
+			"value": 1
+		},
+		"lightning_strike": {
+			"name": [
+				"СЛУЧАЙНЫЙ УДАР МОЛНИИ",
+    			"RANDOM LIGHTNING STRIKE",
+    			"RASTGELE ŞİMŞEK SALDIRISI",
+    			"GOLPE DE RAYO ALEATORIO"
+			],
+			"incompatible":["reflect_projectiles"],
+			"effectType": "hazard",
+			"side": -1,
+			"frame": 21,
+			"value": 1
+		},
+		"reflect_projectiles": {
+			"name": [
+				"ОТРАЖЕНИЕ СНАРЯДОВ",
+				"PROJECTILE REFLECTION",
+				"MERMİ YANSITMA",
+				"REFLEJO DE PROYECTILES"
+			],
+			"incompatible":["no_specials","meteor","freeze_strike","reverse_ball","lightning_strike"],
+			"effectType": "defense",
+			"side": 0,
+			"frame": 22,
+			"value": 1
+		},
+		"luck_bonus": {
+			"name": [
+				"УДАЧА (+25 МОНЕТ)",
+				"LUCK (+25 COINS)",
+				"ŞANS (+25 PARA)",
+				"SUERTE (+25 MONEDAS)"
+			],
+			"effectType": "bonus",
+			"side": 1,
+			"frame": 23,
+			"value": 25
+		},
+		"accelerated_step": {
+			"name": [
+				"УСКОРЕННЫЙ ШАГ",
+				"ACCELERATED STEP",
+				"HIZLANDIRILMIŞ ADIM",
+				"PASO ACELERADO"
+			],
+			"effectType": "bonus",
+			"side": 1,
+			"frame": 24,
+			"value": 1
+		},
+		"hp_700": {
+			"name": [
+				"700 ЕД. ЗДОРОВЬЯ",
+				"700 HP",
+				"700 CAN",
+				"700 DE SALUD"
+			],
+			"incompatible":["hp_1","hp_100"],
+			"effectType": "health",
+			"side": -1,
+			"frame": 25,
+			"value": 700
+		}
+	}
+}

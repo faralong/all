@@ -1,0 +1,57 @@
+{
+	"coins" : 0,
+	"first_launch" : 0,
+	"education" : {
+		"index" : 0,
+		"open" : 1,
+		"completed" : {}
+		},
+	"towers" : {
+		"select" : 0,
+		"progress" : {
+			"win" : 1,
+			"select" : -1
+			},
+		"open" : {
+			"0" : 1,
+			"1" : 1
+			}
+		},
+	"setting" : {
+		"speed_animation" : 0,
+		"sound" : 1,
+		"music" : 1,
+		"blood_mode" : 0,
+		"key_help" : 1,
+		"feedback_review" : {
+			"value" : 0,
+			"button_create" : 0,
+			"win" : 0
+			},
+		"bots_level_analysis" : {
+			"level_bots" : 1,
+			"win" : 0,
+			"fail" : 0,
+			"win_more_50_hp" : 0,
+			"win_less_50_hp" : 0
+				},
+		"control" : {
+			"button_1_player" : {
+				"W" : [87],
+				"A" : [65],
+				"S" : [83],
+				"D" : [68],
+				"attack" : [74],
+				"specialbutton" : [75]
+					},
+			"button_2_player" : {
+				"W" : [87,73],
+				"A" : [65,74],
+				"S" : [83,75],
+				"D" : [68,76],
+				"attack" : [70,186],
+				"specialbutton" : [71,222]
+					}
+				}
+			}
+}
