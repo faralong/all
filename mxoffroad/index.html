@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body class="dark">
+      <h1 id = "load"> Loading...</h1>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
     </div>
@@ -24,6 +25,7 @@
     </div>
     <div id="unity-fullscreen-button" style="display: none;"></div>
     <script src = "jszip.js"></script>
+    
     <script>
          
       
@@ -84,6 +86,7 @@ let binParts = [
 ];
 
 unzipWebpFromExternalBins(binParts).then(blobUrls => {
+    document.getElementById("load").remove()
     blobUrlss = blobUrls;
     const ORIGINAL_CREATE_ELEMENT = document.createElement;
     const ORIGINAL_SET_ATTRIBUTE = Element.prototype.setAttribute;
