@@ -2440,8 +2440,8 @@ function unityFramework(Module) {
     }
     function _JS_SystemInfo_GetDocumentURL(buffer, bufferSize) {
         if (buffer)
-            stringToUTF8(document.URL, buffer, bufferSize);
-        return lengthBytesUTF8(document.URL)
+            stringToUTF8("https://stickman-clash.game-files.crazygames.com/unity/unity2020/stickman-clash/", buffer, bufferSize);
+        return lengthBytesUTF8("https://stickman-clash.game-files.crazygames.com/unity/unity2020/stickman-clash/")
     }
     function _JS_SystemInfo_GetGPUInfo(buffer, bufferSize) {
         var gpuinfo = Module.SystemInfo.gpu;
