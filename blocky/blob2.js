@@ -2551,11 +2551,7 @@ var UnityModule = (function() {
         var tempDoublePtr = STATICTOP;
         STATICTOP += 16;
         function _Init(version, objectName) {
-            Crazygames.init({
-                version: Pointer_stringify(version),
-                crazySDKObjectName: Pointer_stringify(objectName),
-                sdkType: "unity5.6"
-            })
+            
         }
         function _JS_Cursor_SetImage(ptr, length) {
             var binary = "";
@@ -3025,7 +3021,7 @@ var UnityModule = (function() {
             wr.requestInstances[request].timeout = timeout
         }
         function _RequestAd(adType) {
-            Crazygames.requestAd(Pointer_stringify(adType))
+            //Crazygames.requestAd(Pointer_stringify(adType))
         }
         function ___atomic_fetch_add_8(ptr, vall, valh, memmodel) {
             var l = HEAP32[ptr >> 2];
