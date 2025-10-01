@@ -352,6 +352,29 @@ var UnityModule = (function() {
             }
             ))
         }
+
+        window.tre = function(){
+            SendMessage(
+  "CrazySDK",
+  "InitCallback",
+  JSON.stringify({
+    gameLink: "https://www.crazygames.com/game/blocky-demolition-derby",
+    userInfo: {
+      countryCode: "US",
+      locale: "en-US",
+      device: { type: "desktop" },
+      os: { name: "Windows", version: "10" },
+      browser: { name: "Chrome", version: "140.0.0.0" }
+    }
+  })
+);
+
+SendMessage("CrazySDK", "AdblockNotDetected", undefined);
+
+SendMessage("CrazySDK", "AdEvent", "adError");
+
+        }
+
         function SendMessage(gameObject, func, param) {
             console.log(gameObject, func, param)
             if (param === undefined)
