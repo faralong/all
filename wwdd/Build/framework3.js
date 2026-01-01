@@ -1,4 +1,4 @@
-(function unityFramework(Module) {
+var unityFramework = ( () => {
     var _scriptDir;
     var Module = typeof Module != "undefined" ? Module : {};
     var readyPromiseResolve, readyPromiseReject;
@@ -19212,4 +19212,5 @@
 
 }
 )
+
 
