@@ -1,0 +1,49 @@
+{
+  "name": "DefaultCompany_Huggy_vs_Skibidi",
+  "version": "1",
+  "symbols": "1",
+  "origin": "unity",
+  "engineVersion": "2022.3",
+  "runtime": {
+    "aspectRanges": {
+      "landscape": {
+        "min": 1.33,
+        "max": 1.33
+      }
+    },
+    "responsive": false,
+    "res": [
+      {
+        "glob": "emscripten/**",
+        "root": "emscripten/"
+      }
+    ]
+  },
+  "backendVersion": 73,
+  "tinyLoaderScript": "https://d13m0wt5um9hyu.cloudfront.net/loader/73.0.0/tiny-loader.js",
+  "sdkScripts": [
+    "https://d13m0wt5um9hyu.cloudfront.net/loader/73.0.0/sdk.js",
+    "https://d13m0wt5um9hyu.cloudfront.net/loader/73.0.0/gamepix-adapter.js"
+  ],
+  "workerScripts": {
+    "browserImageLoader": "https://d13m0wt5um9hyu.cloudfront.net/loader/73.0.0/browser-image-loader.js",
+    "wasmImageLoader": {
+      "wasm": "https://d13m0wt5um9hyu.cloudfront.net/loader/73.0.0/wasm-image-loader.wasm",
+      "wasmJs": "https://d13m0wt5um9hyu.cloudfront.net/loader/73.0.0/wasm-image-loader.js"
+    }
+  },
+  "sizes": {
+    "br/wbin.js.br": 85297,
+    "br/bin.data.js.br": 8339,
+    "br/wbin._.js.br": 7608295,
+    "br/bin.data._.js.br": 18182357,
+    "gz/wbin.js.gz": 101514,
+    "gz/wbin._.js.gz": 10799785,
+    "gz/bin.data.js.gz": 11405,
+    "gz/bin.data._.js.gz": 23922406,
+    "wbin.js": 480746,
+    "wbin._.js": 32185096,
+    "bin.data.js": 37825,
+    "bin.data._.js": 63574224
+  }
+}
