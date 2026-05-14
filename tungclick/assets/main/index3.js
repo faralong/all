@@ -256,26 +256,15 @@ System.register("chunks:///_virtual/AdShowComp.ts", ["./rollupPluginModLoBabelHe
                 ,
                 s.onLoad = function() {
                     l.setClickFunc(this.noBtn, this, this.closeUI),
-                    l.setClickFunc(this.yesBtn, this, this.showAd)
+                   // l.setClickFunc(this.yesBtn, this, this.showAd)
                 }
                 ,
                 s.onEnable = function() {}
                 ,
-                s.showAd = function() {
-                    var t = this;
-                    "undefined" != typeof YYGGames ? YYGGames.rewardReady ? YYGGames.showReward({
-                        beforeShowAd: function() {
-                            p.dispatchEvent(m.GAME_ADBEFORE)
-                        },
-                        afterShowAd: function() {
-                            p.dispatchEvent(m.GAME_ADAFTER)
-                        },
-                        complete: function(e) {
-                            e ? t.callback() : f.gui.toast("Pls watch the ad completely, so that you can claim your reward", !1)
-                        }
-                    }) : f.gui.toast("No Available Video", !1) : this.callback(),
-                    this.closeUI()
-                }
+                s.showAd = function () {
+    this.callback();
+    this.closeUI();
+};
                 ,
                 s.closeUI = function() {
                     this.ent.remove(e),
