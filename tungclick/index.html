@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-
+	<base href = "https://cdn.jsdelivr.net/gh/faralong/all@main/tungclick/">
     <title>Prank Call: Tung Tung Sahur</title>
 
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui=true"/>
@@ -20,9 +20,77 @@
     <link rel="stylesheet" type="text/css" href="./style.css"/>
     <link rel="icon" href="favicon.ico"/>
     <link rel="preload" as="font" href="./JingNanBoBoHei-Bold.ttf" type="font/woff2" crossorigin="anonymous">
-    <script type="text/javascript" src="https://www.h5games4u.com/gameSDK/YYGGames.js?260326_1804"></script>
+    <script type="text/javascript" src="./YYGGames6.js"></script>
     <script src="cc-resolution.js" charset="utf-8"></script>
-<script>var totalGameSize=15000000;</script>
+<script>var totalGameSize=15000000;
+
+
+
+
+</script>
+<script>(function () {
+  const OLD =
+    "https://cdn.jsdelivr.net/gh/faralong/all@main/tungclick/assets/main/index.js";
+
+  const NEW =
+    "https://cdn.jsdelivr.net/gh/faralong/all@main/tungclick/assets/main/index2.js";
+
+  function swapIfMatch(script) {
+    if (!script || script.tagName !== "SCRIPT") return;
+
+    const src = script.src || script.getAttribute("src");
+    if (!src) return;
+
+    // Normalize comparison (important!)
+    if (src.includes("index.js") && src.includes("tungclick/assets/main")) {
+      script.src = NEW;
+      console.log("[Hooked] Script swapped → index2.js");
+    }
+  }
+
+  // Hook setAttribute
+  const origSetAttr = Element.prototype.setAttribute;
+  Element.prototype.setAttribute = function (name, value) {
+    if (this.tagName === "SCRIPT" && name === "src") {
+      if (value.includes("index.js")) {
+        value = NEW;
+        console.log("[Hooked:setAttribute]");
+      }
+    }
+    return origSetAttr.call(this, name, value);
+  };
+
+  // Hook appendChild (MOST IMPORTANT)
+  const origAppend = Element.prototype.appendChild;
+  Element.prototype.appendChild = function (node) {
+    swapIfMatch(node);
+    return origAppend.call(this, node);
+  };
+
+  // Hook insertBefore
+  const origInsertBefore = Element.prototype.insertBefore;
+  Element.prototype.insertBefore = function (node, ref) {
+    swapIfMatch(node);
+    return origInsertBefore.call(this, node, ref);
+  };
+
+  // Catch already existing scripts
+  document.querySelectorAll("script[src]").forEach(swapIfMatch);
+
+  // Fallback: observe DOM mutations
+  new MutationObserver((mutations) => {
+    for (const m of mutations) {
+      for (const node of m.addedNodes) {
+        swapIfMatch(node);
+      }
+    }
+  }).observe(document.documentElement, {
+    childList: true,
+    subtree: true,
+  });
+
+  console.log("[Hook active] script interceptor running");
+})();</script>
     <style type="text/css">
         * {
             margin: 0;
