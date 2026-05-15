@@ -264,7 +264,7 @@ System.register("chunks:///_virtual/AdShowComp.ts", ["./rollupPluginModLoBabelHe
                 s.showAd = function () {
     this.callback();
     this.closeUI();
-};
+                }
                 ,
                 s.closeUI = function() {
                     this.ent.remove(e),
