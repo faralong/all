@@ -255,7 +255,7 @@ System.register("chunks:///_virtual/AdShowComp.ts", ["./rollupPluginModLoBabelHe
                 }
                 ,
                 s.onLoad = function() {
-                    l.setClickFunc(this.noBtn, this, this.closeUI),
+                    l.setClickFunc(this.noBtn, this, this.closeUI)
                    // l.setClickFunc(this.yesBtn, this, this.showAd)
                 }
                 ,
